@@ -6,7 +6,12 @@ require('dotenv').config();
 
 let app = express();
 
-mongoose.connect(process.env.DBURL);
+mongoose.connect(process.env.DBURL).then(()=>{
+    console.log("connected to MongoDB");
+    app.listen(process.env.PORT,()=>{
+        console.log("Working");
+      });
+});
 
 
 app.use(express.json());
@@ -14,7 +19,4 @@ app.use(express.json());
 
 
 
-app.listen("8000",()=>{
-    console.log("Working");
 
-});
