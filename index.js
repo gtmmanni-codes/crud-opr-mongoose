@@ -19,7 +19,9 @@ mongoose.connect(process.env.DBURL).then(()=>{
 });
 
 
-app.listen("8000");
+app.listen("8000",()=>{
+    console.log("port working");
+});
 
 
 
