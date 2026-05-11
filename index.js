@@ -5,6 +5,8 @@ require('dotenv').config();
 //connect to mongoose
 
 let app = express();
+app.use(express.json());
+
 
 mongoose.connect(process.env.DBURL).then(()=>{
     console.log("connected to MongoDB");
@@ -14,7 +16,6 @@ mongoose.connect(process.env.DBURL).then(()=>{
 });
 
 
-app.use(express.json());
 
 
 
