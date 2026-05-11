@@ -19,6 +19,8 @@ mongoose.connect(process.env.DBURL).then(()=>{
 });
 
 
+app.listen("8000");
+
 
 
 
