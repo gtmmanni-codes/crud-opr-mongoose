@@ -20,3 +20,6 @@ let userEnquirySchema = mongoose.Schema({
     }
     
 }); 
+
+let enquiryModel = mongoose.model("enquiry",userEnquirySchema);
+module.exports = enquiryModel;
