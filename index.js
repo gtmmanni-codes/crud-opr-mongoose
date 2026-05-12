@@ -1,5 +1,7 @@
 // Import the Express framework
 let express = require("express");
+
+// Import Mongoose for MongoDB connection
 let mongoose = require ("mongoose");
 // Load environment variables from .env file
 require('dotenv').config();
