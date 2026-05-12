@@ -1,11 +1,14 @@
 // Import the Express framework
 let express = require("express");
 let mongoose = require ("mongoose");
+// Load environment variables from .env file
 require('dotenv').config();
  
 //connect to mongoose
 
 let app = express();
+
+// Middleware to parse incoming JSON data
 app.use(express.json());
 
 app.post('api/enquiry-insert',(req,res)=>{
