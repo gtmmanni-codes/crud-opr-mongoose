@@ -11,6 +11,7 @@ let app = express();
 // Middleware to parse incoming JSON data
 app.use(express.json());
 
+//creating API route
 app.post('api/enquiry-insert',(req,res)=>{
     console.log("working")
 })
