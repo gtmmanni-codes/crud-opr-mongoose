@@ -1,3 +1,4 @@
+// Import the Express framework
 let express = require("express");
 let mongoose = require ("mongoose");
 require('dotenv').config();
