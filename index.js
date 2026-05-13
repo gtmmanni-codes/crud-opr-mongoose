@@ -15,8 +15,11 @@ app.use(express.json());
 
 //creating API route
 app.post('/api/enquiry-insert',(req,res)=>{
+    
     let data =req.body;
+    console.log(data);
     res.send({status:1,msg:"Data saved",data});
+
     
 })
 
