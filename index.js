@@ -3,6 +3,9 @@ let express = require("express");
 
 // Import Mongoose for MongoDB connection
 let mongoose = require ("mongoose");
+const enquiryModel = require("./models/enquiry.model");
+
+
 // Load environment variables from .env file
 require('dotenv').config();
  
@@ -16,8 +19,18 @@ app.use(express.json());
 //creating API route
 app.post('/api/enquiry-insert',(req,res)=>{
     
-    let data =req.body;
-    console.log(data);
+    //let data =req.body;
+    let {sName,sEmail,sPhone,sMessage}=req.body;
+
+    let enquiry = new enquiryModel(
+        {
+            name:sName,
+            email:sEmail,
+            phone:sPhone,
+            message:sMessage
+        }
+    );
+    
     res.send({status:1,msg:"Data saved",data});
 
     
