@@ -32,7 +32,9 @@ app.post('/api/enquiry-insert',(req,res)=>{
     );
     enquiry.save().then(()=>{
         console.log("Data Saved");
-    });
+    }).catch((err)=>{
+        console.log("err")
+    });;
     
     res.send({status:1,msg:"Data saved",data});
 
