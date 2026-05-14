@@ -30,7 +30,9 @@ app.post('/api/enquiry-insert',(req,res)=>{
             message:sMessage
         }
     );
-    enquiry.save();
+    enquiry.save().then(()=>{
+        console.log("Data Saved");
+    });
     
     res.send({status:1,msg:"Data saved",data});
 
