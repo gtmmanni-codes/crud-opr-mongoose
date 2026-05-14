@@ -19,8 +19,8 @@ app.use(express.json());
 //creating API route
 app.post('/api/enquiry-insert',(req,res)=>{
     
-    let data =req.body;
-    //let {sName,sEmail,sPhone,sMessage}=req.body;
+    //let data =req.body;
+    let {sName,sEmail,sPhone,sMessage}=req.body;
 
     let enquiry = new enquiryModel(
         {
@@ -31,7 +31,7 @@ app.post('/api/enquiry-insert',(req,res)=>{
         }
     );
     enquiry.save().then(()=>{
-        res.send({status:1,msg:"Data saved",data});
+        res.send({status:1,msg:"Data saved"});
     }).catch((err)=>{
         res.send({status:1,msg:"error while saving",err});
     });;
