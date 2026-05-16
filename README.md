@@ -52,4 +52,4 @@ creating new route
 debugging
 saving function
 update readme
-addding .env
+adding .env
